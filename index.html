@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>study_js_codingApple</title>
 </head>
 <body>
+    <!--
+        셀렉터 selector
+    -->
     <div id="js_seletor">
         <h2 id="hello">안녕하세요</h2>
         <h2 id="hi">올때메로나</h2>
-    </div>  
+    </div>
+    <!--
+        Alert 만들어서 유저 위협하기
+    -->
+    <div id="js_alert">
+        <div id="alert-box" class="alert-box">
+            <p>Alert 박스</p>
+            <button onclick="document.getElementById('alert-box').style.display = 'none';">닫기</button>
+        </div>
+        <button onclick="document.getElementById('alert-box').style.display = 'block';">버튼</button>
+    </div>
     <script>
         document.getElementById('hello').innerHTML = '안녕';
         //웹문서 ~의 id가 hello인 html 요소 가져와 ~내부글자
