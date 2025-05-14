@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>study_js_codingApple</title>
 </head>
 <body>
-    <h2 id="hello">안녕하세요</h2>
+    <div id="js_seletor">
+        <h2 id="hello">안녕하세요</h2>
+        <h2 id="hi">올때메로나</h2>
+    </div>  
     <script>
         document.getElementById('hello').innerHTML = '안녕';
-        
+        //웹문서 ~의 id가 hello인 html 요소 가져와 ~내부글자
+        //document.getElementById('!!!').??? = '???'; / = '대입'의 개념, 오른쪽을 왼쪽에 넣어주세요~
+        //document.getElementById('') > selector 
+        //1. 바꾸고 싶은 html 요소의 id 적기
+        //2. html의 뭘 바꿀지 뒤에 적기
+        //> ??? 자리는 구글 검색 필요. 수많은 속성값 변경이 가능하기 때문.
+        //문자는 무조건 따옴표 안에 기재 > 문자자료형
+        document.getElementById('hi').innerHTML = '올때바밤바';
+
+        //올때메로나의 폰트 크기를 30으로 바꾸려면?
+        document.getElementById('hi').style.fontSize = '30px';
     </script>
 </body>
 </html>
