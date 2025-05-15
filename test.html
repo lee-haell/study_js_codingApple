@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .alert_box {
+            background: #0080ff;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            display: none;
+        }
+        .close_btn {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <title>study_js_codingApple_self</title>
+</head>
+<body>
+    <!-- selector -->
+    <div id="greeting">hello!</div>
+    <br>
+    <!-- alert -->
+    <div>
+        <div id="alert_box" class="alert_box">
+            <p id="alert_box_title" class="alert_box_title"> 이것은 alert box 입니다. </p>
+            <button id="close_btn" class="close_btn" onclick="closeAlert();"> ❌ </button>
+        </div>
+        <br>
+        <button id="click_btn" onclick="openAlert();"> Click me! </button>
+    </div>
+    <script>
+        // selector
+        document.getElementById('greeting').innerHTML = 'hi~';
+
+        // alert
+        function openAlert(){
+            document.getElementById('alert_box').style.display = 'block';
+        }
+        function closeAlert(){
+            document.getElementById('alert_box').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
