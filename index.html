@@ -27,8 +27,8 @@
     <!--
         Alert 박스 2개 만들기
     -->
-    <button onclick="test('block', '아이디를 입력 안 하셨어요');">아이디 버튼</button>
-    <button onclick="test('block', '비번을 입력 안 하셨어요');">비번 버튼</button>
+    <button onclick="test('아이디를 입력 안 하셨어요');">아이디 버튼</button>
+    <button onclick="test('비번을 입력 안 하셨어요');">비번 버튼</button>
     <script>
         //js_selector
         document.getElementById('hello').innerHTML = '안녕';
@@ -55,8 +55,8 @@
         // }
 
         //Alert 박스 2개 만들기
-        function test(show, text){
-            document.getElementById('alert-box').style.display = show;
+        function test(text){
+            document.getElementById('alert-box').style.display = 'block';
             document.getElementById('alert-box').innerHTML = text;
         }
     </script>
