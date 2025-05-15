@@ -29,19 +29,29 @@
             <button id="close_btn" class="close_btn" onclick="closeAlert();"> ❌ </button>
         </div>
         <br>
-        <button id="click_btn" onclick="openAlert();"> Click me! </button>
+        <button id="click_btn"> Click me! </button>
     </div>
     <script>
         // selector
         document.getElementById('greeting').innerHTML = 'hi~';
 
-        // alert
+        // alert & function
         function openAlert(){
             document.getElementById('alert_box').style.display = 'block';
         }
         function closeAlert(){
             document.getElementById('alert_box').style.display = 'none';
         }
+
+        //parameter
+        function alert(int){
+            document.getElementById('alert_box').style.display = int;
+        }
+
+        //EventListener
+        document.getElementById('click_btn').addEventListener('click', function(){
+            document.getElementById('alert_box').style.display = 'block';
+        });
     </script>
 </body>
 </html>
