@@ -20,10 +20,15 @@
     <div id="js_alert">
         <div id="alert-box" class="alert-box">
             <p>Alert 박스</p>
-            <button onclick="알림창닫기()">닫기</button>
+            <button onclick="알림창열기('none');">닫기</button>
         </div>
-        <button onclick="알림창열기()">버튼</button>
+        <button onclick="알림창열기('block');">버튼</button>
     </div>
+    <!--
+        Alert 박스 2개 만들기
+    -->
+    <button onclick="test('block', '아이디를 입력 안 하셨어요');">아이디 버튼</button>
+    <button onclick="test('block', '비번을 입력 안 하셨어요');">비번 버튼</button>
     <script>
         //js_selector
         document.getElementById('hello').innerHTML = '안녕';
@@ -40,12 +45,19 @@
 
         
         //js_function
-        function 알림창열기(){
-            document.getElementById('alert-box').style.display = 'block';
-        }
+        function 알림창열기(구멍){
+            document.getElementById('alert-box').style.display = 구멍;
+        }        
+
         //Alert 닫기 버튼의 function
-        function 알림창닫기(){
-            document.getElementById('alert-box').style.display = 'none';
+        // function 알림창닫기(){
+        //     document.getElementById('alert-box').style.display = 'none';
+        // }
+
+        //Alert 박스 2개 만들기
+        function test(show, text){
+            document.getElementById('alert-box').style.display = show;
+            document.getElementById('alert-box').innerHTML = text;
         }
     </script>
 </body>
